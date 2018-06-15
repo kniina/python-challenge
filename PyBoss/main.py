@@ -3,7 +3,7 @@ import os
 import csv
 
 # Specify filepath for data sources: employee_data1.csv OR employee_data2.csv
-csvfilepath = os.path.join('/Users/kniina/GWDC201805DATA3-Class-Repository-DATA/Homework/03-Python/Instructions/PyBoss/raw_data/employee_data1.csv')
+csvfilepath = os.path.join('raw_data', "employee_data1.csv")
 
 # Open the file using dict reader. Specify employeeData variable to hold content.
 with open(csvfilepath, newline='') as employeeData:
@@ -83,7 +83,7 @@ with open(csvfilepath, newline='') as employeeData:
     nEmployeeData = zip(IDs, FirstNames, LastNames, DOBs, SSNs, States)
 
  # Specify path for storing the output file 
-pyBossOutputPath = os.path.join('/Users/kniina/apps/python-challenge/PyBoss/pyBossOutput.csv') 
+pyBossOutputPath = os.path.join('.', 'pyBossOutput.csv') 
 
 # Open the file using "write" mode. Specify csvfile variable to hold content.
 with open(pyBossOutputPath, 'w', newline='') as csvfile:

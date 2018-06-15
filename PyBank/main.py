@@ -3,7 +3,7 @@ import os
 import csv
 
 # Specify filepath for data sources: budget_data_1.csv OR budget_data_2.csv
-csvfilepath = os.path.join('/Users/kniina/GWDC201805DATA3-Class-Repository-DATA/Homework/03-Python/Instructions/PyBank/raw_data/budget_data_2.csv')
+csvfilepath = os.path.join('raw_data','budget_data_2.csv')
 
 # Open the file using csv.reader. Specify revenueData variable to hold content.
 with open(csvfilepath, newline='') as revenueData:
@@ -61,7 +61,7 @@ with open(csvfilepath, newline='') as revenueData:
     avgChange = monthlyChange / totalMonths
    
     # Add one to account for first row outside of loop
-    totalMonths = totalMonths + 1 
+    totalMonths += + 1 
     totalRevenue = totalRevenue + int(firstRevenueRow[1])
 
     # Obtain greatest increase and decrease from corresponding lists
@@ -96,11 +96,11 @@ print("Greatest Increase in Revenue: " + str(grtIncreaseDate) + " ($" + str(grtI
 print("Greatest Decrease in Revenue: " + str(grtDecreaseDate) + " ($" + str(grtDecrease) + ")")
 
 # Specify path for storing the output file 
-pyBankOutputPath = os.path.join('/Users/kniina/apps/python-challenge/PyBank/pyBankOutput2.txt') 
+pyBankOutputPath = os.path.join('.', 'pyBankOutput2.txt') 
 
 # Open the file using "write" mode. Specify csvfile variable to hold content.
 with open(pyBankOutputPath, 'w', newline='') as textfile:
-    # csvwriter = csv.writer(textfile, delimiter='')
+   
     textfile.writelines("Financial Analysis\n")
     textfile.writelines("----------------------------\n")
     textfile.writelines("Total Months: " + str(totalMonths) + "\n")
